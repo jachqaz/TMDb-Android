@@ -17,17 +17,18 @@
 package com.godigital.tmdb.ui.common
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 
 
 abstract class BaseActivity : AppCompatActivity() {
-
     lateinit var binding: ViewDataBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e("LAYOUTID", getLayoutId().toString())
         setContentView(getLayoutId())
         binding = DataBindingUtil.setContentView(this, getLayoutId())
         initView()

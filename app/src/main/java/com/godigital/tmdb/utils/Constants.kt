@@ -19,4 +19,3 @@ package com.godigital.tmdb.utils
 /**
  * Constants used throughout the app.
  */
-const val DATABASE_NAME = "test-db"

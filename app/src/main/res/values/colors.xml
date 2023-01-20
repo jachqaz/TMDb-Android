@@ -11,7 +11,7 @@
     <color name="primaryLightColor">#588e58</color>
     <color name="primaryDarkColor">#003505</color>
     <color name="primaryTextColor">#ffffff</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FF0000</color>
     <color name="colorStructure">#FFF1F1F1</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorTransparentWhite">#cccccc</color>

@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
@@ -47,10 +46,10 @@ android {
 dependencies {
     /* Coroutines */
     // Dependencies for coroutines.
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
     // Dependency is for the special UI context that can be passed to coroutine builders that use
     // the main thread dispatcher to dispatch events on the main thread.
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
 
     /* Hilt*/
     implementation "com.google.dagger:hilt-android:2.44"
@@ -58,13 +57,11 @@ dependencies {
     implementation 'androidx.work:work-runtime-ktx:2.7.1'
 
     /* Other */
-    implementation "androidx.activity:activity-ktx:1.4.0"
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation "androidx.activity:activity-ktx:1.6.1"
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
 
     /* Retrofit */
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -72,8 +69,12 @@ dependencies {
 
     /* Lifecycle*/
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+    /* Glide*/
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
 
     /* Test */
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:2.40.5"
