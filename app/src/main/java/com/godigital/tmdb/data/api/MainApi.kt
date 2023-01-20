@@ -12,7 +12,7 @@ class MainApi @Inject constructor() {
         val listMovie: ArrayList<Movie> = arrayListOf()
         ObjectRetrofit.getInstance().create(MovieApi::class.java).getList(LIST_ID, APY_KEY)
             .body()?.items?.forEach {
-            if (it.id != null && listMovie.size < 5) {
+            if (it.id != null) {
                 listMovie.add(
                     ObjectRetrofit.getInstance().create(MovieApi::class.java)
                         .getMovies(it.id!!, APY_KEY).body() ?: Movie()

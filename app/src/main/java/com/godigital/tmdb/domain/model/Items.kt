@@ -1,11 +1,17 @@
 package com.godigital.tmdb.domain.model
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "items")
 data class Items(
+    @PrimaryKey(autoGenerate = true)
     @SerializedName("adult") var adult: Boolean? = null,
     @SerializedName("backdrop_path") var backdropPath: String? = null,
     @SerializedName("genre_ids") var genreIds: ArrayList<Int> = arrayListOf(),
+    @ColumnInfo(name = "id")
     @SerializedName("id") var id: Int? = null,
     @SerializedName("media_type") var mediaType: String? = null,
     @SerializedName("original_language") var originalLanguage: String? = null,
